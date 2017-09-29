@@ -1,12 +1,13 @@
-# ng-seed
+# ng-template
 
-Angular Webpack seed project.
+Angular template project.
 
 ## Features
 
 - [Angular 4](https://angular.io/) (Typescript)
 - [Webpack 3](https://webpack.js.org/)
-- Ahead-of-Time, tree-shaking, compression (~95kb)
+- [Angular Material](https://material.angular.io/)
+- Ahead-of-Time, tree-shaking, compression
 - Easy configurable dev-server (protocol, headers etc)
 
 ## Prerequirements
@@ -22,11 +23,13 @@ Angular Webpack seed project.
 
 ## Run
 
+To run dev server on [http://localhost:1111](http://localhost:1111):
 
 ```
     npm start
 ```
 
+To build project to **./dist**:
 
 ```
     npm run build

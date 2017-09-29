@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+    drupal:
+        image: drupal
+        ports:
+            - 7171:80
+        volumes:
+            - /var/www/html/modules
+            - /var/www/html/profiles
+            - /var/www/html/themes
+            - /var/www/html/sites
+        environment:
+            UPLOAD_LIMIT: 20M
+            MEMORY_LIMIT: 128M
+            BASE_URL_PROTO: https://
+        restart: always
+
+    postgres:
+        image: postgres
+        ports:
+            - 9191:5432
+        environment:
+            POSTGRES_PASSWORD: password
+            POSTGRES_USER: user
+            POSTGRES_DB: postgres
+        restart: always
