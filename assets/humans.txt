@@ -1,0 +1,6 @@
+# humanstxt.org/
+
+# TECHNOLOGIES
+
+    HTML5, CSS3, SASS (SCSS)
+    Angular, TypeScript, Angular Material, Webpack
