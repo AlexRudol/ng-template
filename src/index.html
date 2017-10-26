@@ -31,9 +31,8 @@
         <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png" >
         <meta name="theme-color" content="#1976d2" >
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,400,400i,500&subset=cyrillic" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,400,400i,500&subset=cyrillic" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
     </head>
     <body>
 
@@ -51,11 +50,9 @@
                     </g>
                 </svg>
             </div>
-
         </app>
 
         <script>
-
             var indicator = document.getElementById("loading");
 
             // Show Loading if it's loading > 2 sec
@@ -65,9 +62,8 @@
 
             // Show Error and hide Loading
             setTimeout( function() {
-                if (indicator) indicator.innerHTML = "<div style='float: left; margin-right: 15px; font-size: 34px; line-height: 1;' >&#129302;</div><div style='text-align: left' ><b>Error</b><br> Please try again later</div>"
+               if (indicator) indicator.innerHTML = "<div style='float: left; margin-right: 15px; font-size: 34px; line-height: 1;' >&#129302;</div><div style='text-align: left' ><b>Error</b><br> Please try again later</div>"
             }, 20000 );
-
         </script>
 
     </body>
