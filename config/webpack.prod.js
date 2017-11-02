@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ngtools = require('@ngtools/webpack');
 const path = require('path');
 
@@ -58,7 +59,11 @@ module.exports = webpackMerge( commonConfig, {
         new CompressionPlugin({
             regExp: /\.css$|\.js$/,
             threshold: 2 * 1024
-        })
+        }),
+
+        new CopyWebpackPlugin([
+            { from: './src/assets', to: './assets' }
+        ])
     ],
 
     module: {
