@@ -1,0 +1,63 @@
+/*
+ * PLASTI
+ * v0.1.0
+ */
+
+// VARIABLES
+
+    // Colours
+    $main:          #1565c0;
+    $second:        #ffa000;
+
+    $success:       #aeea00;
+    $warning:       #ff6d00;
+
+    $background:    #FFF;
+    $grey:          #646464;
+    $text:          #444;
+
+    // Fonts
+    $normal:        'Roboto', sans-serif;
+    $condensed:     'Roboto Condensed', sans-serif;
+    $monospace:     'Roboto Monospace', sans-serif;
+    $font-size:     16px;
+
+    // Sizes
+    $large:         200px;
+    $medium:        170px;
+    $small:         100px;
+    $smallest:      40px;
+
+    // Layout
+    $header-height: 40px;
+    $footer-height: 65px;
+    $sidebar-width: 30%;
+
+    // Indents
+    $base-padding:  50px;
+    $base-margin:   50px;
+
+
+// COMPONENTS
+
+@import "plasti/resetter"; // - done
+@import "plasti/core";
+/*
+ * common - done
+ * height - done
+ * indents - done
+ * layers - done
+ * layout - done
+ * position - done
+ * responsive - done
+ * scroll - done
+ * width - done
+ */
+
+@import "plasti/content/button";
+@import "plasti/content/form";
+@import "plasti/content/heading";
+@import "plasti/content/message";
+@import "plasti/content/navigation";
+@import "plasti/content/table";
+@import "plasti/content/text";

@@ -1,0 +1,31 @@
+/*
+ * WIDTH
+ *
+ */
+
+@mixin set_width($value) {
+    position: relative; width: $value; min-width: $value; max-width: $value; box-sizing: border-box; vertical-align: top;
+}
+$i: 0;
+@while $i <= 100 {
+    .width-#{$i} { @include set_width(0% + $i); }
+    $i: $i + 10;
+}
+
+$width-reducer: 3px; // reduce row width on the size of borders (to prevent wrap elements to the next row)
+
+.width-33, .width-25 {
+    display: inline-block; position: relative; box-sizing: border-box; vertical-align: top;
+}
+.width-50 { width: calc(50% - #{$width-reducer});
+    @include for-phone-only { width: 100%; }
+}
+.width-33 { width: 100%;
+    @include for-tablet-portrait-up { width: calc(50% - #{$width-reducer}); }
+    @include for-tablet-landscape-up { width: calc(33.33% - #{$width-reducer}); }
+}
+.width-25 {
+    @include for-phone-only { width: calc(50% - #{$width-reducer}); }
+    @include for-tablet-portrait-up { width: calc(33.33% - #{$width-reducer}); }
+    @include for-tablet-landscape-up { width: calc(25% - #{$width-reducer}); }
+}

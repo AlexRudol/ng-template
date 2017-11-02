@@ -1,0 +1,20 @@
+/*
+ * INDENTS
+ *
+ */
+
+// Margins
+.margin-top { margin-top: $base-padding; }
+.margin-right { margin-right: $base-padding; }
+.margin-bottom { margin-bottom: $base-padding; }
+.margin-left { margin-left: $base-padding; }
+
+
+// Paddings
+.padding { margin: 0; padding: $base-padding; }
+.padding-y { margin: 0; padding: $base-padding 0; }
+.padding-x { margin: 0; padding: 0 $base-padding; }
+.padding-inner { padding: calc(#{$base-padding} / 2.5) calc(#{$base-padding} / 2.5) 0; }
+.padding-inner-y { padding: calc(#{$base-padding} / 2.5) 0; }
+.padding-inner-x { padding: 0 calc(#{$base-padding} / 2.5); }
+.padding-no { padding: 0 !important; }

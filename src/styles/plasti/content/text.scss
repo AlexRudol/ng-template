@@ -1,0 +1,24 @@
+/*
+ *  TEXT CONTENT
+ *
+ */
+
+// Common elements
+p, ul, ol, table, code { margin: calc(#{$base-padding} * .65) 0; }
+dl {
+    dt { float: left; margin-right: 1em; font-weight: 500; }
+    dd:after { clear: both; }
+}
+
+
+// Lists
+ul, ol { padding-left: $base-padding;
+    li { padding: 0 0 calc(#{$base-padding} / 5) calc(#{$base-padding} / 3); }
+}
+
+
+// Links
+
+a { color: $main; text-decoration: none; transition: all .2s ease;
+    &:hover, &:focus, &:active { color: lighten($main,20%); }
+}

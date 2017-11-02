@@ -1,28 +1,10 @@
 /*
- *  GLOBAL VARIABLES
+ * RESPONSIVE
  *
  */
-
-
-// LAYOUT RULES
 
 @mixin for-phone-only { @media (max-width: 599px) { @content; } }
 @mixin for-tablet-portrait-up { @media (min-width: 600px) { @content; } }
 @mixin for-tablet-landscape-up { @media (min-width: 900px) { @content; } }
 @mixin for-desktop-up { @media (min-width: 1200px) { @content; } }
 @mixin for-big-desktop-up { @media (min-width: 1800px) { @content; } }
-
-
-// GENERIC SIZES
-
-$large: 200px;
-$medium: 170px;
-$small: 100px;
-$smallest: 40px;
-
-
-// LAYOUT
-
-$header-height: 40px;
-$footer-height: 65px;
-$sidebar-width: 30%;

@@ -1,0 +1,19 @@
+/*
+ * HEIGHT
+ *
+ */
+
+@mixin set_height($value) {
+    height: $value; min-height: $value; max-height: $value;
+}
+
+$i: 0;
+@while $i <= 100 {
+    .height-#{$i} { @include set_height(0% + $i); }
+    $i: $i + 10;
+}
+
+$height_additional_values: 25 33 67 75;
+@each $n in $height_additional_values {
+    .height-#{$n} { @include set_height(0% + $n); }
+}

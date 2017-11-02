@@ -1,0 +1,25 @@
+/*
+ *  HEADINGS
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 { margin: $base-margin 0 calc(#{$base-margin} / 2); line-height: 1; font-weight: 400; }
+
+h1, h2 { font-family: $condensed; }
+h1 { margin: $base-margin 0 $base-margin; font-size: 250%; font-weight: 300; color: $main; }
+h2 { font-size: 170%; font-weight: 500; color: lighten($text,15%); }
+h3, h4 { margin: calc(#{$base-margin} * .6) 0 calc(#{$base-margin} * .3); font-weight: 500; }
+h3 { font-size: 120%; color: $main; }
+h4 { font-size: 110%; }
+
+h1+h2, h1+h3, h1+h4 { margin-top: calc(-#{$base-margin} / 2); }
+h2+h3, h2+h4 { margin-top: calc(#{$base-margin} * .3); }
+h3+h4 { margin-top: calc(#{$base-margin} * .3); }
+
+#content, .padding {
+    & > h1, & > h2, & > h3, & > h4 {
+        &:first-child { margin-top: 0; }
+    }
+}
+
+h2.compact { margin: calc(#{$base-margin} * .3) 0 calc(#{$base-margin} * .3); font-size: 120%; text-transform: none; }

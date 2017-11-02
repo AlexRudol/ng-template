@@ -1,31 +1,7 @@
 /*
- *  DEFAULT THEME
+ * ANGULAR MATERIAL
  *
  */
-
-
-// COLORS
-
-    // Main Palette
-    $main:          #1565c0;
-    $second:        #ffa000;
-
-    // Accents
-    $success:       #aeea00;
-    $warning:       #ff6d00;
-
-    $background:    #FFF;
-    $grey:          #646464;
-    $text:          #444;
-
-
-// FONTS
-
-    $normal:        'Open Sans', sans-serif;
-    $font-size:     12px;
-
-
-// ANGULAR MATERIAL
 
 @import '~@angular/material/theming';
 
