@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { RESTService } from "./services/rest.service";
 
 @Component({
     selector: 'app',
@@ -7,6 +8,22 @@ import { Component, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None
 })
 
-export class AppComponent {
-    constructor() {}
+export class AppComponent implements OnInit {
+
+    public menu = [];
+    public page = {};
+
+    constructor(public restService: RESTService) {}
+
+    ngOnInit() {
+
+        this.restService.getMenu().subscribe(data => {
+            this.menu = data;
+        });
+
+        this.restService.getPage('test').subscribe( data => {
+            this.page = data;
+        });
+    }
+
 }

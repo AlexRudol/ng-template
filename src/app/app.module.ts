@@ -7,11 +7,14 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule } from "@angular/material";
+import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from "@angular/material";
+
+import { RESTService } from "./services/rest.service";
 
 import { AppComponent } from './app';
 import { NotFound } from './no-content/not-found';
 import { Test } from './test/test';
+
 
 @NgModule({
     imports: [
@@ -23,6 +26,7 @@ import { Test } from './test/test';
 
         MatButtonModule,
         MatIconModule,
+        MatListModule,
         MatSidenavModule,
         MatToolbarModule
     ],
@@ -32,7 +36,8 @@ import { Test } from './test/test';
         Test
     ],
     providers: [
-        { provide: APP_BASE_HREF, useValue : '.' }
+        { provide: APP_BASE_HREF, useValue : '.' },
+        RESTService
     ],
     bootstrap: [
         AppComponent
