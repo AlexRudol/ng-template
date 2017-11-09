@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ngtools = require('@ngtools/webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
@@ -51,7 +52,7 @@ module.exports = webpackMerge( commonConfig, {
         }),
 
         new ngtools.AotPlugin({
-            tsConfigPath: './tsconfig-aot.json',
+            tsConfigPath: './tsconfig.aot.json',
             entryModule: path.resolve(__dirname, '../src','app','app.module')+'#AppModule'
         }),
 
