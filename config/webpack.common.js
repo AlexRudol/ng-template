@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const DirectoryTreePlugin = require('directory-tree-webpack-plugin');
 
 module.exports = {
 
@@ -26,6 +27,12 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+
+        new DirectoryTreePlugin({
+            dir: 'src/assets/data/',
+            path: 'src/assets/_content.json',
+            extensions: /\.json/
         })
 
     ],
@@ -67,10 +74,10 @@ module.exports = {
                     { loader: 'postcss-loader',
                         options: {
                             plugins: (loader) => [
-                            require('postcss-smart-import'),
-                            require('autoprefixer')({
-                                browsers: ['last 2 version', 'ie 11']
-                            })
+                                require('postcss-smart-import'),
+                                require('autoprefixer')({
+                                    browsers: ['last 2 version', 'ie 11']
+                                })
                             ]
                         }
                     },
